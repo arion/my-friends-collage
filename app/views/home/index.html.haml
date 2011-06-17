@@ -1,3 +1,16 @@
-- title 'Main page'
-%p
-  Find me in app/views/home/index.html.erb
+- title 'Создай каллаж из фотографий своих друзей'
+#info
+  %ul
+    %li 
+      %p Шаг 1: подключи соц. сети:
+      %ul#connections
+        = connection_to('twitter')
+        = connection_to('vkontakte')
+        = connection_to('facebook')
+    %li
+      %p Шаг 2: загрузи список друзей
+      %a{:href => '/refresh_frendlist'} Обновить список
+    %li
+      %p Шаг 3: создай каллаж и поделись им с друзьями
+      %a{:href => '#'} Создать каллаж
+#svg_intro

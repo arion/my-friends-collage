@@ -1,12 +1,18 @@
 body {
-  background-color: #4b7399;
+  background-color: black;
+  color: white;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
 a {
-  color: blue; }
+  color: blue;
+  text-decoration: none; }
   a img {
-    border: none; }
+    border: none;
+    margin: 0 2px; }
+
+img {
+  background-color: white; }
 
 .clear {
   clear: both;
@@ -14,18 +20,21 @@ a {
   overflow: hidden; }
 
 #container {
-  width: 75%;
+  width: 1042px;
   margin: 0 auto;
-  background: white;
-  padding: 20px 40px;
+  background: black;
+  padding: 0;
   border: solid 1px black;
-  margin-top: 20px; }
+  margin-top: 0; }
+  #container #info {
+    margin-bottom: 30px; }
 
 #flash_notice,
 #flash_error,
 #flash_alert {
   padding: 5px 8px;
-  margin: 10px 0; }
+  margin: 10px 0;
+  color: black; }
 
 #flash_notice {
   background-color: #ccffcc;

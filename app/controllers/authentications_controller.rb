@@ -7,21 +7,27 @@ class AuthenticationsController < ApplicationController
       authentication = Authentication.new(:provider => auth['provider'], :uid => auth['uid'])
       current_user ? authentication.user = current_user : authentication.build_user
     end
+    authentication.access_token = auth['credentials']['token']
+    authentication.auth_info = auth
     if authentication.save
       session[:user_id] = authentication.user_id  
-      redirect_to root_url, :notice => "Successfully created authentication."
+      flash[:notice] = "Успешно авторизовались на сервисе #{auth['provider']}"
+      redirect_to root_path
     else
-      redirect_to root_url, :error => authentication.full_messages.to_sentence
+      flash[:error] = authentication.errors.full_messages.to_sentence
+      redirect_to root_path
     end
   end
   
   def destroy  
     session[:user_id] = nil  
-    redirect_to root_url, :notice => "Signed out!"  
+    flash[:notice] = "Покинули систему"  
+    redirect_to root_path
   end
   
   def failure
-    redirect_to root_url, :notice => "Unknown error (#{params[:message]})"
+    flash[:notice] = "Во время авторизации произошла ошибка (#{params[:message]})"
+    redirect_to root_path
   end
 
 end

@@ -3,8 +3,9 @@ db/*.sqlite3
 log/*.log
 tmp/
 log/
-public/javascripts/friends
-public/javascripts/friends/*
+public/javascripts/users
+public/javascripts/users/*
+config/initializers/omniauth.rb
 *.tmproj
 .idea
 .DS_Store

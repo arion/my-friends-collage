@@ -1,0 +1,5 @@
+Rails.application.config.middleware.use OmniAuth::Builder do  
+  provider :twitter, 'key', 'secret'  
+  provider :vkontakte, 'key', 'secret', :scope => 'friends'
+  provider :facebook, 'key', 'secret', :scope => 'offline_access,read_friendlists'  
+end

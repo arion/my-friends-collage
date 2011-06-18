@@ -2,15 +2,21 @@
 #info
   %ul
     %li 
-      %p Шаг 1: подключи соц. сети:
+      %p 
+        %b Шаг 1: 
+        подключи соц. сетям
+        = link_to '(выйти)', "/signout", :id => 'signout', :style => 'display:none;'
       %ul#connections
-        = connection_to('twitter')
-        = connection_to('vkontakte')
-        = connection_to('facebook')
+        - %w(twitter vkontakte facebook).each do |provider|
+          %li{:class => provider}= link_to provider, "/auth/#{provider}"
     %li
-      %p Шаг 2: загрузи список друзей
-      %a{:href => '/refresh_frendlist'} Обновить список
+      %p 
+        %b Шаг 2: 
+        загрузи список друзей
+      %a{:href => '/refresh_frendlist'} Загрузить
     %li
-      %p Шаг 3: создай каллаж и поделись им с друзьями
-      %a{:href => '#'} Создать каллаж
+      %p 
+        %b Шаг 3: 
+        поделись с друзьями
+      %a{:href => '#'} Поделиться
 #svg_intro

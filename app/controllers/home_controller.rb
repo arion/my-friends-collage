@@ -10,9 +10,9 @@ class HomeController < ApplicationController
   
   def refresh_frendlist
     if current_user
+      expire_page "/javascripts/users/#{current_user.id}/info.js"
       begin
         current_user.reprocess_all_friendlists!
-        expire_page "/javascripts/friends/#{current_user.id}/index.js"
         flash[:notice] = 'Успешно обновили список ваших друзей'
       rescue Exception => e
         flash[:error] = "Ошибка: #{e.message}"

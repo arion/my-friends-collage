@@ -6,7 +6,7 @@
       = yield(:title) || "Untitled"
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     = stylesheet_link_tag "application"
-    = javascript_include_tag "friends/#{current_user.id}/index" if current_user
+    = javascript_include_tag "users/#{current_user.id}/info" if current_user
     = javascript_include_tag :defaults
     = csrf_meta_tag
     = yield(:head)

@@ -3,7 +3,7 @@ MyFriendsColage::Application.routes.draw do
 
   get "home/index"
   
-  match "/javascripts/friends/:user_id/index" => "home#friends"
+  match "/javascripts/users/:user_id/info" => "home#info"
   match "/refresh_frendlist" => "home#refresh_frendlist"
   
   match "/auth/:provider/callback" => "authentications#create"

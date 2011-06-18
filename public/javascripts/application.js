@@ -3,21 +3,16 @@
 var friend_elements = []
 
 $().ready(function() {
-  // if (typeof(friends) == 'object') {
-  //   friend_elements = []
-  //   $.each(friends, add_friend_in_list);
-  //   $('#my_friends').html(friend_elements);
-  // }
+  if (typeof(authentications) == 'object') {
+    $.each(authentications, function(key, value) {
+      $('#connections li.' + value).remove();
+      $('#signout').show();
+    });
+  }
   if (typeof(friends) == 'object') {
     $('#svg_intro').height(Math.ceil(friends.length / 20) * 52 + 2 + 'px').width('1042px').svg({onLoad: drawIntro});
   }
 })
-
-function add_friend_in_list(key, friend) {
-  var img = $('<img>').attr('src', friend.photo).attr('alt', friend.name).attr('width', '50').attr('height', '50');
-  var link = $('<a>').attr('href', friend.link).attr('title', friend.name).html(img);
-  friend_elements.push(link[0]);
-}
 
 function drawIntro(svg) {
   var i = 0;

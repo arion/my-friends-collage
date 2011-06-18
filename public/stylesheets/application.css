@@ -4,6 +4,17 @@ body {
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
+h1 {
+  font-family: Helvetica, sans-serif
+  font-size: 48px
+  font-style: italic
+  font-variant: normal
+  font-weight: bold
+  height: 84px
+  letter-spacing: normal
+  line-height: normal
+}
+
 a {
   color: blue;
   text-decoration: none; }

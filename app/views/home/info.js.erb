@@ -1,3 +1,8 @@
+var authentications = new Array();
+<% current_user.authentications.each do |auth| %>
+authentications.push('<%= auth.provider %>');
+<% end %>
+
 var friends = new Array();
 <% @friends.each do |friend| %>
 friends.push({name: '<%= friend.name %>', link: '<%= friend.link_on_profile %>', photo: '<%= friend.photo_url %>'});

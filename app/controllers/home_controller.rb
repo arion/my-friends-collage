@@ -1,11 +1,13 @@
 class HomeController < ApplicationController
-  caches_page :friends
+  caches_page :info
 
   def index
   end
   
-  def friends
-    @friends = User.find(params[:user_id]).friends.order("RAND()") if current_user
+  def info
+    @user = User.find(params[:user_id])
+    @friends = @user.friends.order("RAND()")
+    @authentications = @user.authentications.fresh
   end
   
   def refresh_frendlist

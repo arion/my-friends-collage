@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-MyFriendsColage::Application.load_tasks
+MyFriendsCollage::Application.load_tasks

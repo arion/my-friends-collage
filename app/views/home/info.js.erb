@@ -1,6 +1,6 @@
 var authentications = new Array();
-<% current_user.authentications.each do |auth| %>
-authentications.push('<%= auth.provider %>');
+<% @authentications.each do |auth| %>
+authentications.push({provider: '<%= auth.provider %>', uid: '<%= auth.uid %>'});
 <% end %>
 
 var friends = new Array();

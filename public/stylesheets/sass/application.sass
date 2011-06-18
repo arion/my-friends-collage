@@ -1,15 +1,17 @@
-$primary_color: #000
+$primary_color: #161616
 
 body
   background-color: $primary_color
-  color: rgba(255, 255, 255, 1)
+  color: #747474
   font:
     family: Verdana, Helvetica, Arial
     size: 14px
 
 a
-  color: blue
+  color: #fff
   text-decoration: none
+  &:hover
+    text-decoration: underline
   img
     border: none
     margin: 0 2px
@@ -22,15 +24,24 @@ img
   height: 0
   overflow: hidden
 
+.hide
+  display: none
+
 #container
-  width: 1042px
-  margin: 0 auto
-  background: #000
-  padding: 0
+  width: 900px
+  margin: 20px auto
+  background-color: #202020
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  padding: 0 20px 10px
   border: solid 1px black
+  font-style: italic
+
+#svg_intro
+  margin: 0 auto
+  padding: 0 0 20px
   margin-top: 0
-  #info
-    margin-bottom: 30px
 
 #flash_notice,
 #flash_error,
@@ -73,3 +84,9 @@ img
     margin: 8px 10px
   ul
     margin: 0
+
+input#count_line
+  width: 20px
+
+b
+  color: #404040

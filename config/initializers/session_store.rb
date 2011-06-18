@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-MyFriendsColage::Application.config.session_store :cookie_store, :key => '_my-friends-colage_session'
+MyFriendsCollage::Application.config.session_store :cookie_store, :key => '_my-friends-collage_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# MyFriendsColage::Application.config.session_store :active_record_store
+# MyFriendsCollage::Application.config.session_store :active_record_store

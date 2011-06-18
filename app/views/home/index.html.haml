@@ -1,22 +1,28 @@
 - title 'Создай каллаж из фотографий своих друзей'
-#info
-  %ul
-    %li 
-      %p 
-        %b Шаг 1: 
-        подключи соц. сетям
-        = link_to '(выйти)', "/signout", :id => 'signout', :style => 'display:none;'
-      %ul#connections
-        - %w(twitter vkontakte facebook).each do |provider|
-          %li{:class => provider}= link_to provider, "/auth/#{provider}"
-    %li
-      %p 
-        %b Шаг 2: 
-        загрузи список друзей
-      %a{:href => '/refresh_frendlist'} Загрузить
-    %li
-      %p 
-        %b Шаг 3: 
-        поделись с друзьями
-      %a{:href => '#'} Поделиться
-#svg_intro
+
+%ul
+  %li 
+    %p 
+      %b Шаг 1: 
+      подключись к соц. сетям
+      %a#signout_link.hide{:href => "/signout"} (выйти)
+    %ul#connections
+      - %w(twitter vkontakte facebook).each do |provider|
+        %li{:class => provider}
+          %a{:href => "/auth/#{provider}"}= provider
+  %li
+    %p 
+      %b Шаг 2: 
+      загрузи список друзей
+      %a#refresh_link.hide{:href => '/refresh_frendlist'} Загрузить
+  %li
+    %p 
+      %b Шаг 3: 
+      выбери количество фотографий по горизонтали
+      %input#count_line.hide{:type => 'text', :value => '20'} 
+      %a#refresh_svg_link.hide{:href => '#', :onclick => 'refresh_svg(); return false;'} Перерисовать
+  %li
+    %p 
+      %b Шаг 4: 
+      поделись с друзьями
+      %a#share_link.hide{:href => '#'} Поделиться

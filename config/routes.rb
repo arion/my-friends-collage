@@ -1,4 +1,4 @@
-MyFriendsColage::Application.routes.draw do
+MyFriendsCollage::Application.routes.draw do
   resources :authentications
 
   get "home/index"

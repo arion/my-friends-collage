@@ -1,23 +1,14 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: #161616;
+  color: #747474;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
-h1 {
-  font-family: Helvetica, sans-serif
-  font-size: 48px
-  font-style: italic
-  font-variant: normal
-  font-weight: bold
-  height: 84px
-  letter-spacing: normal
-  line-height: normal
-}
-
 a {
-  color: blue;
+  color: white;
   text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
   a img {
     border: none;
     margin: 0 2px; }
@@ -30,15 +21,24 @@ img {
   height: 0;
   overflow: hidden; }
 
+.hide {
+  display: none; }
+
 #container {
-  width: 1042px;
-  margin: 0 auto;
-  background: black;
-  padding: 0;
+  width: 900px;
+  margin: 20px auto;
+  background-color: #202020;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 0 20px 10px;
   border: solid 1px black;
+  font-style: italic; }
+
+#svg_intro {
+  margin: 0 auto;
+  padding: 0 0 20px;
   margin-top: 0; }
-  #container #info {
-    margin-bottom: 30px; }
 
 #flash_notice,
 #flash_error,
@@ -79,3 +79,9 @@ img {
     margin: 8px 10px; }
   .error_messages ul {
     margin: 0; }
+
+input#count_line {
+  width: 20px; }
+
+b {
+  color: #404040; }

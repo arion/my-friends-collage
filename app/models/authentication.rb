@@ -10,6 +10,8 @@ class Authentication < ActiveRecord::Base
   
   serialize :auth_info
   
+  before_update :touch_date
+  
   scope :fresh, where('updated_at > ?', 5.hour.ago)
   
   def self.find_or_new(user, auth)
@@ -21,5 +23,12 @@ class Authentication < ActiveRecord::Base
     authentication.access_token = auth['credentials']['token']
     authentication.auth_info = auth
     authentication
+  end
+
+private
+
+  # FIXME: wtf? why timestamp don't touched
+  def touch_date
+    self.updated_at = Time.now
   end
 end

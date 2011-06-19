@@ -12,6 +12,7 @@
     = yield(:head)
 
   %body
+    #svg_intro
     #container
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
@@ -20,4 +21,3 @@
         %h1= yield(:title)
 
       = yield
-    #svg_intro

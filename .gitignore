@@ -5,6 +5,8 @@ tmp/
 log/
 public/javascripts/users
 public/javascripts/users/*
+public/users
+public/users/*
 public/index.html
 config/initializers/omniauth.rb
 *.tmproj

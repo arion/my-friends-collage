@@ -1,0 +1,17 @@
+- title 'Коллаж из фотографий друзей | myfriendscollage.ru'
+- content_for :head do
+  %script{:type => "text/javascript", :src => "//yandex.st/share/share.js", :charset => "utf-8"}
+
+#svg_intro
+#container
+  %h1 Что дальше?
+  %ul
+    %li 
+      Поделись ссылкой на свой коллаж с друзьями
+      %div{:class => "yashare-auto-init", "data-yashareL10n" => "ru", "data-yashareType" => "none", "data-yashareQuickServices" => "yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,moikrug"}
+    %li
+      Создать новый коллаж
+      %a{:href => '/'} Создать
+    / %li
+    /   Заказать png изображение с этим коллажем, что бы вставить его как аватарку или просто сохранить на своем компьютере
+    /   %a{:href => '#', :onclick => "alert('todo'); return false;"} Заказать

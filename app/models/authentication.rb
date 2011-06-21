@@ -15,9 +15,9 @@ class Authentication < ActiveRecord::Base
   scope :fresh, where('updated_at > ?', 5.hour.ago)
   
   def self.find_or_new(user, auth)
-    authentication = self.find_by_provider_and_uid(auth['provider'], auth['uid'])
+    authentication = self.find_by_provider_and_uid(auth['provider'].to_s, auth['uid'].to_s)
     if authentication.blank?
-      authentication = self.new(:provider => auth['provider'], :uid => auth['uid'])
+      authentication = self.new(:provider => auth['provider'].to_s, :uid => auth['uid'].to_s)
       user ? authentication.user = user : authentication.build_user
     end
     authentication.access_token = auth['credentials']['token']

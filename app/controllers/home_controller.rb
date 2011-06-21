@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   caches_page :info
-  caches_page :show
 
   def index
     @user = current_user
@@ -17,7 +16,6 @@ class HomeController < ApplicationController
   def refresh_frendlist
     if current_user
       expire_page "/javascripts/users/#{current_user.id}/info.js"
-      expire_page "/users/#{current_user.id}.html"
       begin
         current_user.reprocess_all_friendlists!
         redirect_to "/users/#{current_user.id}" and return

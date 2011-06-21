@@ -1,0 +1,110 @@
+body {
+  background-color: #161616;
+  color: #747474;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px; }
+
+a {
+  color: white;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+  a img {
+    border: none;
+    margin: 0 2px; }
+
+img {
+  background-color: white; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+.hide {
+  display: none; }
+
+#container {
+  width: 900px;
+  margin: 40px auto;
+  background-color: #202020;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 0 20px 10px;
+  border: solid 1px black;
+  font-style: italic; }
+
+#svg_intro {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 40px; }
+
+#flash_notice,
+#flash_error,
+#flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+  color: black; }
+
+#flash_notice {
+  background-color: #ccffcc;
+  border: solid 1px #66cc66; }
+
+#flash_error,
+#flash_alert {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666; }
+
+.fieldWithErrors {
+  display: inline; }
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #cf0000;
+  padding: 0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px; }
+  .error_messages h2 {
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #cc0000;
+    color: white; }
+  .error_messages p {
+    margin: 8px 10px; }
+  .error_messages ul {
+    margin: 0; }
+
+input#count_line {
+  width: 20px; }
+
+b {
+  color: #404040; }
+
+ul#connections {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  ul#connections li {
+    float: left;
+    list-style: none; }
+    ul#connections li a {
+      height: 60px;
+      width: 70px;
+      display: block;
+      text-decoration: none; }
+      ul#connections li a.twitter {
+        background: url(../images/twitter.png) no-repeat; }
+      ul#connections li a.facebook {
+        background: url(../images/facebook.png) no-repeat; }
+      ul#connections li a.vkontakte {
+        background: url(../images/vkontakte.png) no-repeat; }
+
+footer {
+  text-align: center; }

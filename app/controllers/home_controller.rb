@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-  caches_page :index
   caches_page :info
   caches_page :show
 

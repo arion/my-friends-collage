@@ -5,8 +5,7 @@ gem 'rails', '3.0.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-# gem 'mysql2', '~> 0.2.6'
-gem 'pg'
+gem "pg", :group => :production
 gem 'omniauth'
 gem 'haml', '>= 3.1.2'
 gem 'sass', '>= 3.1.2'
@@ -22,9 +21,10 @@ gem "jquery-rails"
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
+  gem 'mysql2', '~> 0.2.6'
+  
   gem 'rspec'
   gem 'rspec-rails'
   gem "nifty-generators"
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
-gem "mocha", :group => :test

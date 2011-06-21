@@ -12,4 +12,4 @@ config/initializers/omniauth.rb
 *.tmproj
 .idea
 .DS_Store
-# config/database.yml
+config/database.yml

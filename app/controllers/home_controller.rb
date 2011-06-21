@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   
   def info
     @user = User.find(params[:user_id])
-    @friends = @user.friends.order("RAND()")
+    @friends = @user.friends.order(:uid)
     @authentications = @user.authentications.fresh
   end
   

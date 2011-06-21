@@ -21,7 +21,6 @@ class HomeController < ApplicationController
       expire_page "/users/#{current_user.id}.html"
       begin
         current_user.reprocess_all_friendlists!
-        flash[:notice] = 'Успешно обновили список ваших друзей'
         redirect_to "/users/#{current_user.id}" and return
       rescue Exception => e
         flash[:error] = "Ошибка: #{e.message}"

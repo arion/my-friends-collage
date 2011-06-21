@@ -22,4 +22,5 @@
       %p 
         %b Шаг 2: 
         создай коллаж (доступно раз в 5 минут)
-        %a#refresh_link.hide{:href => '/refresh_frendlist'} Создать
+        - if current_user
+          %a#refresh_link{:href => '/refresh_frendlist'} Создать

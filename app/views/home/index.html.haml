@@ -13,7 +13,7 @@
         - if current_user
           %a#signout_link{:href => "/signout"} (Выйти)
       %ul#connections
-        - connections = current_user.authentications.collect(&:provider)
+        - connections = current_user ? current_user.authentications.collect(&:provider) : []
         - (%w(twitter vkontakte facebook) - connections).each do |provider|
           %li
             %a{:href => "/auth/#{provider}", :class => provider, :title => provider} &nbsp;

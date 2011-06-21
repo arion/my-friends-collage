@@ -10,9 +10,11 @@
       %p 
         %b Шаг 1: 
         подключись к социальным сетям
-        %a#signout_link.hide{:href => "/signout"} (Выйти)
+        - if current_user
+          %a#signout_link{:href => "/signout"} (Выйти)
       %ul#connections
-        - %w(twitter vkontakte facebook).each do |provider|
+        - connections = current_user.authentications.collect(&:provider)
+        - (%w(twitter vkontakte facebook) - connections).each do |provider|
           %li
             %a{:href => "/auth/#{provider}", :class => provider, :title => provider} &nbsp;
       .clear

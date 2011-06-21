@@ -12,9 +12,7 @@ class HomeController < ApplicationController
   end
   
   def info
-    @user = User.find(params[:user_id])
-    @friends = @user.friends.order(:uid)
-    @authentications = @user.authentications.fresh
+    @friends = User.find(params[:user_id]).friends.order(:uid)
   end
   
   def refresh_frendlist

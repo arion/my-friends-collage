@@ -1,8 +1,3 @@
-var authentications = new Array();
-<% @authentications.each do |auth| %>
-authentications.push({provider: '<%= auth.provider %>', uid: '<%= auth.uid %>'});
-<% end %>
-
 var friends = new Array();
 <% @friends.each do |friend| %>
 friends.push({name: '<%= friend.name %>', link: '<%= friend.link_on_profile %>', photo: '<%= friend.photo_url %>'});

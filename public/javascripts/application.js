@@ -5,12 +5,6 @@ var count_line = 20;
 var svg_content = "";
 
 $().ready(function() {
-  if (typeof(authentications) == 'object') {
-    $.each(authentications, function(key, value) {
-      $('#connections li a.' + value.provider).hide();
-    });
-    $('#signout_link, #refresh_link').show();
-  }
   if (typeof(friends) == 'object') {
     $('#share_link, #count_line, #refresh_svg_link').show();
     refresh_svg();

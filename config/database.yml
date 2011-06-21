@@ -29,11 +29,10 @@ test:
   socket: /tmp/mysql.sock
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
-  reconnect: false
-  database: my-friends-colage_production
-  pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  username: ysdvwindax
+  port: 5432
+  host: ec2-174-129-222-56.compute-1.amazonaws.com
+  database: ysdvwindax
+  password: pScZbyvg2SRSba1EPYqv

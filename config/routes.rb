@@ -1,4 +1,5 @@
 MyFriendsCollage::Application.routes.draw do
+  
   resources :authentications
 
   match "/" => "home#index"

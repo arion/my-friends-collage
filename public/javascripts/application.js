@@ -26,7 +26,7 @@ function drawIntro(svg) {
       height = height + 52;
     }
   });
-  svg.text(element.width() - 140, element.height() - 5, 'myfriendscollage.ru', {fill: 'white'});
+  svg.text(element.width() - 200, element.height() - 5, 'myfriendscollage.heroku.com', {fill: 'white'});
   svg_content = svg.toSVG();
 }
 

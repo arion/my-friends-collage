@@ -14,7 +14,8 @@ class AuthenticationsController < ApplicationController
   end
   
   def destroy  
-    @current_user, session[:user_id] = nil
+    @current_user = nil
+    session[:user_id] = nil
     flash[:notice] = "Покинули систему"  
     redirect_to root_path
   end
